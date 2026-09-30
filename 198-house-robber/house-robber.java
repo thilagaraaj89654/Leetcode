@@ -5,9 +5,9 @@ class Solution {
         int rob1 = 0;
         int rob2 = 0;
         for (int i : nums) {
-            int rob3 = Math.max(rob1, rob2 + i);
+            int robMoney = Math.max(rob1, rob2 + i);
             rob2 = rob1;
-            rob1 = rob3;
+            rob1 = robMoney;
         }
         return rob1;
     }
