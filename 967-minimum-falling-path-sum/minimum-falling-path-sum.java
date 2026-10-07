@@ -2,7 +2,6 @@ class Solution {
     public int minFallingPathSum(int[][] matrix) {
         int n = matrix.length;
         int[] dp = matrix[0].clone();
-
         for (int i = 1; i < n; i++) {
             int[] temp = new int[n];
             for (int j = 0; j < n; j++) {
@@ -14,7 +13,6 @@ class Solution {
             }
             dp = temp;
         }
-
         int minSum = Integer.MAX_VALUE;
         for (int val : dp) {
             minSum = Math.min(minSum, val);
